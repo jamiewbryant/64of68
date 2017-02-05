@@ -1,0 +1,12 @@
+import os, shutil
+source = 'c:/Users/Bryant/Desktop/A/'
+dest = 'c:/Users/Bryant/Desktop/B/'
+files = os.listdir(source)
+files.sort()
+print(source,files)
+for f in files:
+    src = source+f
+    dst = dest+f
+    shutil.move(src,dst)
+
+

@@ -1,0 +1,17 @@
+import shutil, sys, time, os
+source = 'c:/Users/Bryant/Desktop/DailyFiles/'
+dest = 'c:/Users/Bryant/Desktop/HomeOffice/'
+files = os.listdir(source)
+
+now = time.time()
+for f in files:
+    src = source+f
+    dst = dest+f
+    if os.stat(src).st_mtime > now - 1 * 86400:
+        if os.path.isfile(src):
+            shutil.move(src, dst)
+
+    
+
+#c:/Users/Bryant/Desktop/DailyFiles/
+#c:/Users/Bryant/Desktop/HomeOffice/

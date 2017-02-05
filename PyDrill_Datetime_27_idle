@@ -1,0 +1,27 @@
+import datetime, pytz
+
+#Poortland
+officeP=datetime.datetime.now(tz=pytz.timezone('US/Pacific'))
+pHours=officeP.time()
+if pHours >=datetime.time(9) and pHours <=datetime.time(21):
+    print"Portland is Open"
+else:
+    print"Portland is Closed"
+
+#New York
+officeNY=datetime.datetime.now(tz=pytz.timezone('US/Eastern'))
+nyHours=officeNY.time()
+if nyHours >=datetime.time(9) and nyHours <=datetime.time(21):
+    print"New York is Open"
+else:
+    print"New York is Closed"
+
+#London
+officeL=datetime.datetime.now(tz=pytz.timezone('Europe/London'))
+lHours=officeL.time()
+if lHours >=datetime.time(9) and lHours <=datetime.time(21):
+    print"London is Open"
+else:
+    print"London is Closed"
+
+
